@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Privacy Policy — GenSnitch" description="Privacy policy for the GenSnitch Chrome extension.">
+  <article class="content">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: December 2024</p>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        GenSnitch is designed with privacy as a core principle. We believe your browsing activity 
+        is your business—not ours.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Collection</h2>
+      <p>
+        <strong>We do not collect, store, or transmit any personal data.</strong>
+      </p>
+      <p>
+        GenSnitch operates entirely on your device. The extension analyzes webpage content locally 
+        using on-device processing. No text from the pages you visit is ever sent to external servers.
+      </p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>The extension requests only the minimum permissions necessary:</p>
+      <ul>
+        <li><strong>activeTab</strong> — To analyze the content of the current page when you activate the extension.</li>
+      </ul>
+      <p>We do not request broad browsing history access or any permissions beyond what's essential.</p>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>GenSnitch does not integrate with any third-party analytics, tracking, or advertising services.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>
+        If we update this policy, we'll revise the "Last updated" date above. Material changes 
+        will be communicated through the extension's update notes.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy? Open an issue on our 
+        <a href="https://github.com/gensnitch" target="_blank" rel="noopener noreferrer">GitHub</a>.
+      </p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .content {
+    max-width: 640px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+
+  .updated {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+  }
+
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    margin: 1rem 0;
+  }
+
+  li {
+    color: var(--text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+</style>
+
