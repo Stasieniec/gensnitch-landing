@@ -2,13 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="GenSnitch — Detect AI-Generated Content">
+<Layout title="GenSnitch — Detect AI-Generated Images">
   <section class="hero">
-    <span class="badge">Chrome Extension</span>
-    <h1>Detect AI-generated content<br />as you browse.</h1>
+    <h1>Detect AI-generated images<br />as you browse.</h1>
     <p class="subtitle">
-      A lightweight extension that flags synthetic text in real-time. 
-      Know what's human, know what's not.
+      Right-click any image to check for AI signatures. 
+      Analyzes metadata locally—nothing leaves your browser.
     </p>
     <a 
       href="https://chrome.google.com/webstore" 
@@ -25,16 +24,16 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="features">
     <div class="feature">
-      <h3>Real-time Detection</h3>
-      <p>Analyzes text as you read. No manual scanning required.</p>
+      <h3>Metadata Analysis</h3>
+      <p>Scans EXIF, XMP, C2PA signatures, and PNG text chunks for AI tool markers.</p>
     </div>
     <div class="feature">
-      <h3>Privacy First</h3>
-      <p>All processing happens locally. Your browsing stays private.</p>
+      <h3>100% Local</h3>
+      <p>All processing happens in your browser. No images uploaded anywhere.</p>
     </div>
     <div class="feature">
       <h3>Zero Bloat</h3>
-      <p>Minimal footprint. No impact on page load or performance.</p>
+      <p>Minimal footprint. No analytics, no tracking, no data collection.</p>
     </div>
   </section>
 </Layout>
@@ -42,18 +41,6 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .hero {
     padding: 3rem 0 5rem;
-  }
-
-  .badge {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent);
-    background: var(--accent-dim);
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
   }
 
   h1 {

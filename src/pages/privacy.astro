@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Privacy Policy — GenSnitch" description="Privacy policy for the GenSnitch Chrome extension.">
   <article class="content">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: December 2024</p>
+    <p class="updated">Last updated: January 2025</p>
 
     <section>
       <h2>Overview</h2>
@@ -21,8 +21,8 @@ import Layout from '../layouts/Layout.astro';
         <strong>We do not collect, store, or transmit any personal data.</strong>
       </p>
       <p>
-        GenSnitch operates entirely on your device. The extension analyzes webpage content locally 
-        using on-device processing. No text from the pages you visit is ever sent to external servers.
+        GenSnitch operates entirely on your device. The extension analyzes image metadata locally 
+        in your browser. No images are ever uploaded to external servers.
       </p>
     </section>
 
@@ -30,7 +30,10 @@ import Layout from '../layouts/Layout.astro';
       <h2>Permissions</h2>
       <p>The extension requests only the minimum permissions necessary:</p>
       <ul>
-        <li><strong>activeTab</strong> — To analyze the content of the current page when you activate the extension.</li>
+        <li><strong>contextMenus</strong> — To create the right-click menu option.</li>
+        <li><strong>activeTab</strong> — To access images on the current page when you activate the extension.</li>
+        <li><strong>storage</strong> — To save analysis reports temporarily.</li>
+        <li><strong>scripting</strong> — To fetch blob: URLs from page context.</li>
       </ul>
       <p>We do not request broad browsing history access or any permissions beyond what's essential.</p>
     </section>
@@ -51,8 +54,8 @@ import Layout from '../layouts/Layout.astro';
     <section>
       <h2>Contact</h2>
       <p>
-        Questions about this policy? Open an issue on our 
-        <a href="https://github.com/gensnitch" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        Questions about this policy? Open an issue on 
+        <a href="https://github.com/Stasieniec/gensnitch" target="_blank" rel="noopener noreferrer">GitHub</a>.
       </p>
     </section>
   </article>
