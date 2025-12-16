@@ -27,6 +27,17 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section>
+      <h2>Local Processing</h2>
+      <p>All analysis happens locally using:</p>
+      <ul>
+        <li><strong>EXIF/XMP parsing</strong> — Extracts metadata from image files.</li>
+        <li><strong>PNG text chunk scanning</strong> — Reads embedded generation parameters.</li>
+        <li><strong>C2PA/Content Credentials verification</strong> — Uses bundled WebAssembly (WASM) to validate digital signatures locally. No external validation services are contacted.</li>
+      </ul>
+      <p>The extension uses <code>wasm-unsafe-eval</code> in its Content Security Policy solely to run the bundled C2PA WebAssembly module. This does not allow loading or executing external code.</p>
+    </section>
+
+    <section>
       <h2>Permissions</h2>
       <p>The extension requests only the minimum permissions necessary:</p>
       <ul>
@@ -34,13 +45,14 @@ import Layout from '../layouts/Layout.astro';
         <li><strong>activeTab</strong> — To access images on the current page when you activate the extension.</li>
         <li><strong>storage</strong> — To save analysis reports temporarily.</li>
         <li><strong>scripting</strong> — To fetch blob: URLs from page context.</li>
+        <li><strong>https://*/*</strong> (optional) — Requested on first use to fetch images from websites.</li>
       </ul>
       <p>We do not request broad browsing history access or any permissions beyond what's essential.</p>
     </section>
 
     <section>
       <h2>Third-Party Services</h2>
-      <p>GenSnitch does not integrate with any third-party analytics, tracking, or advertising services.</p>
+      <p>GenSnitch does not integrate with any third-party analytics, tracking, or advertising services. There are no external API calls.</p>
     </section>
 
     <section>
@@ -120,6 +132,15 @@ import Layout from '../layouts/Layout.astro';
     color: var(--accent);
     position: absolute;
     left: 0;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    background: var(--bg-elevated);
+    padding: 0.125rem 0.375rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
   }
 
   a {

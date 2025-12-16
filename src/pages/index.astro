@@ -10,17 +10,17 @@ import Layout from '../layouts/Layout.astro';
       Analyzes metadata locally—nothing leaves your browser.
     </p>
     <div class="cta-group">
-      <a 
-        href="https://chrome.google.com/webstore" 
-        class="cta"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Add to Chrome
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M7 17L17 7M17 7H7M17 7V17"/>
-        </svg>
-      </a>
+    <a 
+      href="https://chrome.google.com/webstore" 
+      class="cta"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Add to Chrome
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </svg>
+    </a>
       <a 
         href="https://github.com/Stasieniec/gensnitch" 
         class="cta cta-secondary"
@@ -37,16 +37,20 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="features">
     <div class="feature">
+      <h3>C2PA Verification</h3>
+      <p>Full Content Credentials validation with cryptographic signature checking.</p>
+    </div>
+    <div class="feature">
       <h3>Metadata Analysis</h3>
-      <p>Scans EXIF, XMP, C2PA signatures, and PNG text chunks for AI tool markers.</p>
+      <p>Scans EXIF and XMP fields for AI tool signatures like Stable Diffusion or DALL-E.</p>
+    </div>
+    <div class="feature">
+      <h3>PNG Scanning</h3>
+      <p>Extracts generation parameters, prompts, and workflow data from PNG chunks.</p>
     </div>
     <div class="feature">
       <h3>100% Local</h3>
-      <p>All processing happens in your browser. No images uploaded anywhere.</p>
-    </div>
-    <div class="feature">
-      <h3>Zero Bloat</h3>
-      <p>Minimal footprint. No analytics, no tracking, no data collection.</p>
+      <p>All processing in your browser. No uploads, no tracking, no external APIs.</p>
     </div>
   </section>
 </Layout>
